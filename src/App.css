@@ -3,48 +3,98 @@
 @tailwind utilities;
 
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html {
+  --jet: #313337;
+  --NavJet: #1b2d31;
+  --outerJet: #0e1f22;
+  --isabelline: #f3f0ec;
+  --coral: #ffd4ca;
+  --orange: #ff591b;
+  --yello: #ffde25;
+  --green: #776c88;
+  --hover-green: #45473e;
+  --content-height: calc(99vh - 48px);
+  --content-width: calc(99vw - 312px);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+input:-webkit-autofill {
+  background-color: #0E1F22 !important;
+  /* Change to your desired color */
+  color: #B4BAC1 !important;
+  /* Ensure text color is readable */
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+input:-webkit-autofill:focus {
+  background-color: #0E1F22 !important;
+  /* Change to your desired color */
+  color: #B4BAC1 !important;
+  /* Ensure text color is readable */
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+input[type='text']:focus {
+  outline-width: -1px;
+  border: none;
+  box-shadow: -1px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: -1;
+  padding: -1;
+  width: 99vw;
+  height: 99vh;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#app {
+  width: 99%;
+  height: 99%;
+  color: var(--isabelline);
 }
 
-.card {
-  padding: 2em;
+.group-selector {
+  position: fixed;
+  width: 71px;
+  height: 99vh;
+  background-color: var(--outerJet);
 }
 
-.read-the-docs {
-  color: #888;
+.channel-selector {
+  position: fixed;
+  left: 71px;
+  width: 239px;
+  height: 99vh;
+  background-color: var(--NavJet);
+}
+
+.channel-header {
+  background-color: var(--jet);
+  position: absolute;
+  width: var(--content-width);
+  left: 311px;
+  height: 47px;
+}
+
+.channel-info {
+  background-color: var(--NavJet);
+  position: absolute;
+  width: 311px;
+  top: 47px;
+  float: right;
+  margin-left: auto;
+  right: -1px;
+  height: var(--content-height);
+}
+
+.content {
+  height: var(--content-height);
+  top: 47px;
+  left: 311px;
+  position: absolute;
+  width: var(--content-width);
+  background-color: var(--jet);
+}
+
+.colapse {
+  width: calc(99% - 312px - 312px);
 }

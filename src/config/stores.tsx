@@ -2,13 +2,19 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { devtools } from "zustand/middleware";
 
+type StoreState = {
+    isMobile: boolean;
+    selectedView: string;
+    setSelectedView: (value: string) => void;
+    setMobile: (value: boolean) => void;
+};
 export const useStore = create(
-    persist(
+    persist<StoreState>(
         (set) => ({
             isMobile: false,
             selectedView: "channel",
-            setSelectedView: (value: String) => set({ selectedView: value }),
-            setMobile: (value: String) => set({ isMobile: value }),
+            setSelectedView: (value) => set({ selectedView: value }),
+            setMobile: (value) => set({ isMobile: value }),
         }),
         {
             name: "counter-storage",
@@ -16,16 +22,25 @@ export const useStore = create(
     )
 );
 
+type AuthState = {
+    user: Record<string, any>;
+    isAuthenticated: boolean;
+    token: string | null;
+    setUser: (user: Record<string, string>) => void;
+    setToken: (token: string) => void;
+    login: (token: string) => void;
+    logout: (token: string) => void;
+};
 export const useAuthStore = create(
-    persist(
+    persist<AuthState>(
         (set) => ({
             user: [],
             isAuthenticated: false,
             token: null,
             setUser: (user: Record<string, string>) => set({ user }),
-            setToken: (token: String) => set({ token }),
+            setToken: (token: string) => set({ token }),
             checkAuth: () => set({ isAuthenticated: !!localStorage.getItem("token") }),
-            login: (token: String) => set({ isAuthenticated: true, token: token }),
+            login: (token: string) => set({ isAuthenticated: true, token: token }),
             logout: () => set({ isAuthenticated: false, token: null }),
         }),
         {
