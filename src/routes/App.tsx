@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation, useParams } from "react-router-dom";
 
-import "../App.css";
 import { useAuthStore } from "../config/stores";
 import MainLayout from "../layouts/mobile/main-layout";
 
@@ -33,7 +32,7 @@ function DynamicLayout(children: ReactElement) {
 
 const Home = () => {
     return (
-        <div>
+        <div className="text-sm">
             <h1>Hello World!</h1>
         </div>
     );
