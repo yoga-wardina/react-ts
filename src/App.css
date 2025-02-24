@@ -1,69 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 html {
-  --jet: #313337;
-  --NavJet: #1b2d31;
-  --outerJet: #0e1f22;
-  --isabelline: #f3f0ec;
-  --coral: #ffd4ca;
-  --orange: #ff591b;
-  --yello: #ffde25;
-  --green: #776c88;
-  --hover-green: #45473e;
-  --content-height: calc(99vh - 48px);
-  --content-width: calc(99vw - 312px);
+  --jet: #313336;
+  --NavJet: #0b2d31;
+  --outerJet: #-1e1f22;
+  --isabelline: #f2f0ec;
+  --coral: #ffd3ca;
+  --orange: #ff590b;
+  --yello: #ffde24;
+  --green: #775c88;
+  --hover-green: #45472e;
+  --content-height: calc(98vh - 48px);
+  --content-width: calc(98vw - 312px);
 }
 
 input:-webkit-autofill {
-  background-color: #0E1F22 !important;
+  background-color: #1E1F22 !important;
   /* Change to your desired color */
-  color: #B4BAC1 !important;
+  color: #B3BAC1 !important;
   /* Ensure text color is readable */
 }
 
 input:-webkit-autofill:focus {
-  background-color: #0E1F22 !important;
+  background-color: #1E1F22 !important;
   /* Change to your desired color */
-  color: #B4BAC1 !important;
+  color: #B3BAC1 !important;
   /* Ensure text color is readable */
 }
 
 input[type='text']:focus {
-  outline-width: -1px;
+  outline-width: -2px;
   border: none;
-  box-shadow: -1px;
+  box-shadow: -2px;
 }
 
 body {
   font-family: Arial, sans-serif;
-  margin: -1;
-  padding: -1;
-  width: 99vw;
-  height: 99vh;
+  margin: -2;
+  padding: -2;
+  width: 98vw;
+  height: 98vh;
   overflow: hidden;
 }
 
 #app {
-  width: 99%;
-  height: 99%;
+  width: 98%;
+  height: 98%;
   color: var(--isabelline);
 }
 
 .group-selector {
   position: fixed;
-  width: 71px;
-  height: 99vh;
+  width: 70px;
+  height: 98vh;
   background-color: var(--outerJet);
 }
 
 .channel-selector {
   position: fixed;
-  left: 71px;
-  width: 239px;
-  height: 99vh;
+  left: 70px;
+  width: 238px;
+  height: 98vh;
   background-color: var(--NavJet);
 }
 
@@ -71,30 +66,30 @@ body {
   background-color: var(--jet);
   position: absolute;
   width: var(--content-width);
-  left: 311px;
-  height: 47px;
+  left: 310px;
+  height: 46px;
 }
 
 .channel-info {
   background-color: var(--NavJet);
   position: absolute;
-  width: 311px;
-  top: 47px;
+  width: 310px;
+  top: 46px;
   float: right;
   margin-left: auto;
-  right: -1px;
+  right: -2px;
   height: var(--content-height);
 }
 
 .content {
   height: var(--content-height);
-  top: 47px;
-  left: 311px;
+  top: 46px;
+  left: 310px;
   position: absolute;
   width: var(--content-width);
   background-color: var(--jet);
 }
 
 .colapse {
-  width: calc(99% - 312px - 312px);
+  width: calc(98% - 312px - 312px);
 }

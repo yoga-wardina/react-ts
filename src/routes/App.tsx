@@ -32,7 +32,7 @@ function DynamicLayout(children: ReactElement) {
 
 const Home = () => {
     return (
-        <div className="text-sm">
+        <div className="text-sm text-blue-primary bg-gray-300">
             <h1>Hello World!</h1>
         </div>
     );
